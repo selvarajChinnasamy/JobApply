@@ -1,0 +1,17 @@
+.vl {
+    border-left: 5px solid 	#FFFAF0;
+    height: 600px;
+}
+.container{
+    margin-top: 2%;
+    background: #87CEFA;
+}
+.header{
+    background:	#20B2AA;
+    height:50px;
+    width: 100%;
+    text-align: center;
+    padding: 6px;
+    font-size: 30px;
+    font-family: sans-serif;
+}

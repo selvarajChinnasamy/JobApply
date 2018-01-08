@@ -1,0 +1,12 @@
+<form [formGroup]="catForm" (ngSubmit)="SubmitForm(catForm.value)">    
+<div mat-dialog-content>
+  <p>Add your Job category</p>
+  <mat-form-field>
+    <input matInput tabindex="1" formControlName="name" placeholder="Category" >
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" >Cancel</button>
+  <button mat-button [mat-dialog-close]="catForm.controls['name'].value" [disabled]="!catForm.valid" color="primary"  cdkFocusInitial>Add</button>
+</div>
+</form>

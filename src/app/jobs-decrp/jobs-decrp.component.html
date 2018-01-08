@@ -1,0 +1,29 @@
+<h2>{{category}}</h2>
+<div class="row" *ngIf="jobs.length>0">
+  <div class="col-sm-11">
+    <table class="table table-striped col-sm-8">
+      <thead>
+        <tr>
+          <th>Job Name</th>
+          <th>Job Category</th>
+          <th>Job Description</th>
+          <th>Date and Time</th>
+          <th>Apply</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of jobs | slice:0:sliceVal;let i=index">
+          <td>{{data.jobName}}</td>
+          <td>{{data.jobCate}}</td>
+          <td>{{data.jobDescp}}</td>
+          <td>{{data.time}}</td>
+          <td><button  [disabled]="data.jobApply=='Yes'" (click)="apply(data,i)" mat-raised-button color="primary">Apply</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="more"  mat-raised-button (click)="sliceAdd()" *ngIf="jobs.length>3" color="primary">More</button>
+  </div>
+  <div class="col-sm-1">
+      <mat-card>{{jobs.length}}</mat-card>
+    </div>
+</div>

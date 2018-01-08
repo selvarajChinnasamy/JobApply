@@ -1,0 +1,16 @@
+h2{
+    background: black;
+    width: 149.5%;
+    position: absolute;    
+    margin-left: -18.5%;
+    margin-top: 0%;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.table{
+    margin-top: 15%;
+}
+.more{
+    margin-left: 105%;
+}

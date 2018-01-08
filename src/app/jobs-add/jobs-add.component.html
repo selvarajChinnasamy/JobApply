@@ -1,0 +1,22 @@
+<form [formGroup]="jobForm" (ngSubmit)="SubmitForm(jobForm.value)">
+  <mat-form-field class="example-full-width">
+    <input placeholder="Job Name" matInput type="text" formControlName="jobName">
+  </mat-form-field>
+  <div class="example-full-width row">
+      <div class="col-sm-10">
+          <mat-select  placeholder="Select Category" formControlName="jobCate">
+              <mat-option *ngFor="let cat of category" [value]="cat">
+                {{ cat }}
+              </mat-option>
+            </mat-select>
+      </div>
+      <div class="col-sm-2">
+          <img (click)="openDialog()"  src="assets/plus.png">            
+      </div>
+    </div>
+  <mat-form-field class="example-full-width">
+    <textarea placeholder="Job Description" matInput type="text" formControlName="jobDescp" cols="5"></textarea>
+  </mat-form-field>
+  <button class="example-full-width" type="submit" mat-raised-button color="primary" [disabled]="!jobForm.valid">Primary</button>
+</form>
+<simple-notifications [options]="options"></simple-notifications>
