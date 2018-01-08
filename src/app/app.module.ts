@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatDialogModule, MatTableModule, MatInputModule, MatCardModule, MatButtonModule, MatSelectModule, MatChipsModule} from '@angular/material';
+import {MatDialogModule, MatInputModule, MatCardModule, MatButtonModule, MatSelectModule, MatChipsModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { JobsAddComponent } from './jobs-add/jobs-add.component';
@@ -30,7 +30,6 @@ import { AppliedJobsComponent } from './applied-jobs/applied-jobs.component';
     MatSelectModule,
     MatChipsModule,
     MatCardModule,
-    MatTableModule,
     SimpleNotificationsModule.forRoot(),
   ],
   entryComponents:[CataAddComponent,AppliedJobsComponent],

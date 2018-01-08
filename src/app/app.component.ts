@@ -19,7 +19,7 @@ export class AppComponent {
   }
   openDialog(): void {
     let dialogRef = this.dialog.open(AppliedJobsComponent, {
-      width: '400px',
+      width: '700px',
     });
   }
 }

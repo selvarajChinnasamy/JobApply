@@ -1,4 +1,4 @@
-<h2>{{category}}</h2>
+<h2 *ngIf="jobs.length>0">{{category}}</h2>
 <div class="row" *ngIf="jobs.length>0">
   <div class="col-sm-11">
     <table class="table table-striped col-sm-8">
